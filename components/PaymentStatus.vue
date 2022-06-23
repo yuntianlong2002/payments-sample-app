@@ -15,8 +15,8 @@
       </v-btn>
     </div>
     <div v-else class="text-center mt-8">
-      <v-btn depressed small @click.prevent="newPayment()">
-        Make a new payment
+      <v-btn depressed small @click.prevent="newPayment(paymentResponse.id)">
+        Return to Onramp Page
       </v-btn>
     </div>
   </div>
@@ -59,8 +59,8 @@ export default class PaymentStatus extends Vue {
     }, 3000)
   }
 
-  newPayment() {
-    this.$emit('makeNewPayment')
+  newPayment(paymentResponseId: string) {
+    window.open(`http://localhost:3000?token=${paymentResponseId}`, "_self");
   }
 
   async getPayment(paymentId: string) {
