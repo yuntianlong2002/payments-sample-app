@@ -1,5 +1,6 @@
 # A Sample Payments Application
 
+
 Here you will find a sample web application that demonstrates some of the features of the [Circle Payments API](https://www.circle.com/payments-api).
 
 ## Circle API Documentation Portal
