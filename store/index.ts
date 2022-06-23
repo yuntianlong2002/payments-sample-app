@@ -72,7 +72,7 @@ export const actions: ActionTree<RootState, RootState> = {
 
 export const getters: GetterTree<RootState, RootState> = {
   getApiKey: (state) => {
-    return state.bearerToken
+    return process.env.API_KEY
   },
   getRequestPayload: (state) => {
     return state.apiRequest.payload
