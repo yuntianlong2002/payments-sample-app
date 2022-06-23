@@ -212,7 +212,6 @@
       <v-content class="pa-3 pt-8">
         <p>Settings</p>
         <v-form class="mt-8">
-          <v-text-field v-model="apiKey" label="Your API key" outlined />
           <p class="subtitle-2 font-weight-light mb-8">
             Do not share or record your API keys in publicly accessible mediums
             such as GitHub, client-side code, etc.
@@ -684,14 +683,6 @@ export default class DefaultLayoutsClass extends Vue {
       return item.to === this.$route.path
     })
     return currentPage && currentPage.title
-  }
-
-  get apiKey() {
-    return this.$store.getters.getApiKey
-  }
-
-  set apiKey(value: string) {
-    this.$store.commit('SET_BEARER_TOKEN', value)
   }
 
   get isMarketplace() {
