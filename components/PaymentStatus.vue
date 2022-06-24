@@ -60,7 +60,7 @@ export default class PaymentStatus extends Vue {
   }
 
   newPayment(paymentResponseId: string) {
-    window.open(`http://localhost:3000?token=${paymentResponseId}`, "_self");
+    window.open(`http://ramp-seven.vercel.app?token=${paymentResponseId}`, "_self");
   }
 
   async getPayment(paymentId: string) {
